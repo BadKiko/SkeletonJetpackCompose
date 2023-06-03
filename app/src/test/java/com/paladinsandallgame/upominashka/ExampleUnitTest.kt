@@ -1,4 +1,4 @@
-package com.pogachacha.educationgames
+package com.paladinsandallgame.upominashka
 
 import org.junit.Test
 

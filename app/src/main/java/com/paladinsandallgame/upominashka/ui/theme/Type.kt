@@ -1,4 +1,4 @@
-package com.pogachacha.educationgames.ui.theme
+package com.paladinsandallgame.upominashka.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

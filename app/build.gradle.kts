@@ -57,6 +57,12 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
+
+    implementation(libs.gson)
+
     implementation(libs.destinationCore)
     ksp(libs.destinationKsp)
 
@@ -85,31 +91,3 @@ dependencies {
 
 
 
-
-/*
-
-dependencies {
-    //DI
-    implementation "com.google.dagger:hilt-android:2.46"
-    kapt "com.google.dagger:hilt-android-compiler:2.46"
-    implementation "androidx.hilt:hilt-navigation-compose:1.1.0-alpha01"
-    implementation("com.squareup:javapoet:1.13.0")
-
-    //NAVIGATION
-    implementation("io.github.raamcosta.compose-destinations:core:1.9.42-beta")
-    ksp("io.github.raamcosta.compose-destinations:ksp:1.9.42-beta")
-
-    //COMPOSE & TEST
-    implementation 'androidx.compose.material3:material3:1.0.1'
-    implementation 'androidx.core:core-ktx:1.10.0'
-    implementation 'androidx.compose.ui:ui:1.4.2'
-    implementation 'androidx.compose.ui:ui-tooling-preview:1.5.0-alpha03'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
-    implementation 'androidx.activity:activity-compose:1.7.1'
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.4.2'
-    debugImplementation 'androidx.compose.ui:ui-tooling:1.4.2'
-}*/

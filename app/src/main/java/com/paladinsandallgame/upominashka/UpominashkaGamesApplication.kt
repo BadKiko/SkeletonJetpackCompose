@@ -1,7 +1,7 @@
-package com.pogachacha.educationgames
+package com.paladinsandallgame.upominashka
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class EducationGamesApplication: Application()
+class UpominashkaGamesApplication: Application()
