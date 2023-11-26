@@ -1,8 +1,8 @@
-package com.paladinsandallgame.upominashka.ui.screens
+package com.kiko.skeletonjetpackcompose.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.paladinsandallgame.upominashka.ui.viewmodels.StartViewModel
+import com.kiko.skeletonjetpackcompose.ui.viewmodels.StartViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 

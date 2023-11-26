@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Upominashka"
+rootProject.name = "SkeletonJetpackCompose"
 include(":app")
  

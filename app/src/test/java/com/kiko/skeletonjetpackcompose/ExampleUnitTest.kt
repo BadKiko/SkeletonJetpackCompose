@@ -1,4 +1,4 @@
-package com.paladinsandallgame.upominashka
+package com.kiko.skeletonjetpackcompose
 
 import org.junit.Test
 

@@ -4,17 +4,17 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android") version "2.46" apply true
-    id("com.google.devtools.ksp") version "1.8.10-1.0.9"
+    id("com.google.devtools.ksp") version "1.9.20-1.0.14"
 }
 
 android {
-    namespace = "com.pogachacha.educationgames"
-    compileSdk = 33
+    namespace = "com.kiko.skeletonjetpackcompose"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.pogachacha.educationgames"
+        applicationId = "com.kiko.skeletonjetpackcompose"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -44,7 +44,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     packaging {
         resources {
@@ -57,14 +57,22 @@ android {
 }
 
 dependencies {
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
+
+    // Local Database
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
     ksp(libs.androidx.room.compiler)
 
-    implementation(libs.gson)
-
+    // Navigation
     implementation(libs.destinationCore)
     ksp(libs.destinationKsp)
+
+    // Json
+    ksp(libs.moshi.kotlin.codegen)
+    implementation(libs.moshi)
 
     // DI
     implementation(libs.hilt.android)

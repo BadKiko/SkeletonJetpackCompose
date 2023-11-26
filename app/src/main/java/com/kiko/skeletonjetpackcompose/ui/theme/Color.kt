@@ -1,4 +1,4 @@
-package com.paladinsandallgame.upominashka.ui.theme
+package com.kiko.skeletonjetpackcompose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
