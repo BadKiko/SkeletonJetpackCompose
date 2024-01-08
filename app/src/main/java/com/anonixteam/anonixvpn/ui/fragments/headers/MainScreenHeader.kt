@@ -16,6 +16,7 @@ import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
@@ -48,13 +49,20 @@ fun MainScreenHeader() {
         FilledTonalButton(
             modifier = Modifier.clip(CircleShape),
             onClick = {},
-            contentPadding = PaddingValues(16.dp, 0.dp)
+            contentPadding = PaddingValues(16.dp, 0.dp),
+            colors = ButtonDefaults.filledTonalButtonColors(
+                containerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(0.5f),
+                contentColor = MaterialTheme.colorScheme.tertiary
+            )
         ) {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = "Premium", style = MaterialTheme.typography.bodyMedium)
+                Text(
+                    text = "Premium",
+                    style = MaterialTheme.typography.bodyMedium
+                )
 
                 IconButton(
                     modifier = Modifier.size(24.dp),
@@ -63,7 +71,6 @@ fun MainScreenHeader() {
                     }
                 ) {
                     Icon(
-                        tint = MaterialTheme.colorScheme.tertiary,
                         imageVector = Icons.Rounded.Star,
                         contentDescription = "Menu"
                     )

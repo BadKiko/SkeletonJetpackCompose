@@ -35,7 +35,14 @@ val Typography = Typography(
         fontWeight = FontWeight.SemiBold
     ),
     displayMedium = TextStyle(
-
+        fontSize = 38.sp,
+        fontFamily = monserratFamily,
+        fontWeight = FontWeight.SemiBold
+    ),
+    displaySmall = TextStyle(
+        fontSize = 16.sp,
+        fontFamily = monserratFamily,
+        fontWeight = FontWeight.Medium
     ),
     titleLarge = TextStyle(
         fontFamily = quantityFamily,
