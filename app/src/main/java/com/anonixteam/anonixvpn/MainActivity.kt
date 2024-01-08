@@ -1,4 +1,4 @@
-package com.kiko.skeletonjetpackcompose
+package com.anonixteam.anonixvpn
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,9 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.kiko.skeletonjetpackcompose.ui.screens.NavGraphs
-import com.kiko.skeletonjetpackcompose.ui.screens.destinations.MenuScreenDestination
-import com.kiko.skeletonjetpackcompose.ui.theme.SkeletonJetpackComposeTheme
+import com.anonixteam.anonixvpn.ui.screens.NavGraphs
+import com.anonixteam.anonixvpn.ui.theme.AnonixVpnTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,15 +17,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SkeletonJetpackComposeTheme {
+            AnonixVpnTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
                     DestinationsNavHost(
-                        navGraph = NavGraphs.root,
-                        startRoute = MenuScreenDestination
+                        navGraph = NavGraphs.root
                     )
                 }
             }

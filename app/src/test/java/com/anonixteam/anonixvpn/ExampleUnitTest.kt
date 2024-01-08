@@ -1,4 +1,4 @@
-package com.kiko.skeletonjetpackcompose
+package com.anonixteam.anonixvpn
 
 import org.junit.Test
 

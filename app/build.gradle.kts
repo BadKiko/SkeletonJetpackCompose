@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kiko.skeletonjetpackcompose"
+    namespace = "com.anonixteam.anonixvpn"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kiko.skeletonjetpackcompose"
+        applicationId = "com.anonixteam.anonixvpn"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -57,6 +57,11 @@ android {
 }
 
 dependencies {
+    //UI
+    implementation(libs.stories)
+    implementation(libs.coil.compose)
+    implementation(libs.skydoves.cloudy)
+
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)

@@ -1,6 +1,8 @@
 [versions]
-agp = "8.3.0-alpha13"
+agp = "8.4.0-alpha03"
+coil-compose = "2.5.0"
 core = "1.9.42-beta"
+github-cloudy = "0.1.2"
 github-core = "1.9.55"
 gson = "2.10.1"
 hilt-android = "2.46"
@@ -18,11 +20,13 @@ moshi = "1.15.0"
 moshi-kotlin-codegen = "1.15.0"
 retrofit = "2.9.0"
 room-runtime = "2.6.0"
+stories = "1.0.2"
 
 [libraries]
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-runtime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-runtime" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 destinationCore = { module = "io.github.raamcosta.compose-destinations:core", version.ref = "github-core" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -39,6 +43,8 @@ compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = 
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi-kotlin-codegen" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+skydoves-cloudy = { module = "com.github.skydoves:cloudy", version.ref = "github-cloudy" }
+stories = { module = "com.github.raipankaj:Stories", version.ref = "stories" }
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }

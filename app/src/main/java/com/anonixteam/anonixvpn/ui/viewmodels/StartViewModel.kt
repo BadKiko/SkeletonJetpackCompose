@@ -1,4 +1,4 @@
-package com.kiko.skeletonjetpackcompose.ui.viewmodels
+package com.anonixteam.anonixvpn.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -1,10 +1,25 @@
-package com.kiko.skeletonjetpackcompose.ui.theme
+package com.anonixteam.anonixvpn.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.anonixteam.anonixvpn.R
+
+private val quantityFamily = FontFamily(
+    Font(R.font.quantify, FontWeight.Normal)
+)
+
+private val monserratFamily = FontFamily(
+    Font(R.font.monserrat_bold, FontWeight.Bold),
+    Font(R.font.monserrat_semibold, FontWeight.SemiBold),
+    Font(R.font.monserrat_medium, FontWeight.Medium),
+    Font(R.font.monserrat_regular, FontWeight.Normal),
+    Font(R.font.monserrat_thin, FontWeight.Thin)
+
+)
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -14,6 +29,17 @@ val Typography = Typography(
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
+    ),
+    bodyMedium = TextStyle(
+        fontSize = 16.sp,
+        fontWeight = FontWeight.SemiBold
+    ),
+    displayMedium = TextStyle(
+
+    ),
+    titleLarge = TextStyle(
+        fontFamily = quantityFamily,
+        fontSize = 24.sp
     )
     /* Other default text styles to override
     titleLarge = TextStyle(
