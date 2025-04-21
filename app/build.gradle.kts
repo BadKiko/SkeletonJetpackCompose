@@ -2,17 +2,17 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android") version "2.46" apply true
-    id("com.google.devtools.ksp") version "1.9.20-1.0.14"
+    id("com.google.dagger.hilt.android") version "2.51.1"
+    id("com.google.devtools.ksp") version "2.0.0-1.0.23"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
 android {
-    namespace = "com.anonixteam.anonixvpn"
+    namespace = "dev.skeleton.jetpackcompose"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.anonixteam.anonixvpn"
+        applicationId = "dev.skeleton.jetpackcompose"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -44,15 +44,22 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = "2.0.0"
     }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "drawable/onboard_1.png"
+            excludes += "drawable/onboard_2.png"
+            excludes += "drawable/onboard_3.png"
+            excludes += "drawable/onboard_5.png"
         }
     }
-    kapt {
-        correctErrorTypes = true
+    hilt {
+        enableAggregatingTask = true
+    }
+    ksp {
+        arg("hilt.supportedInjectionTypes", "JVM_STATIC")
     }
 }
 
@@ -68,7 +75,6 @@ dependencies {
 
     // Local Database
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
     ksp(libs.androidx.room.compiler)
 
     // Navigation
@@ -81,7 +87,7 @@ dependencies {
 
     // DI
     implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
+    ksp(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
 

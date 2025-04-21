@@ -1,4 +1,4 @@
-package com.anonixteam.anonixvpn.ui.theme
+package dev.skeleton.jetpackcompose.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -6,62 +6,54 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.anonixteam.anonixvpn.R
+import dev.skeleton.jetpackcompose.R
 
-private val quantityFamily = FontFamily(
+val quantifyFamily = FontFamily(
     Font(R.font.quantify, FontWeight.Normal)
 )
 
-private val monserratFamily = FontFamily(
+val monserratFamily = FontFamily(
     Font(R.font.monserrat_bold, FontWeight.Bold),
     Font(R.font.monserrat_semibold, FontWeight.SemiBold),
     Font(R.font.monserrat_medium, FontWeight.Medium),
     Font(R.font.monserrat_regular, FontWeight.Normal),
     Font(R.font.monserrat_thin, FontWeight.Thin)
-
 )
 
-// Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = monserratFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
     bodyMedium = TextStyle(
-        fontSize = 16.sp,
-        fontWeight = FontWeight.SemiBold
+        fontFamily = monserratFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.25.sp
     ),
     displayMedium = TextStyle(
-        fontSize = 38.sp,
         fontFamily = monserratFamily,
-        fontWeight = FontWeight.SemiBold
+        fontWeight = FontWeight.Normal,
+        fontSize = 45.sp,
+        lineHeight = 52.sp,
+        letterSpacing = 0.sp
     ),
     displaySmall = TextStyle(
-        fontSize = 16.sp,
         fontFamily = monserratFamily,
-        fontWeight = FontWeight.Medium
+        fontWeight = FontWeight.Medium,
+        fontSize = 36.sp,
+        lineHeight = 44.sp,
+        letterSpacing = 0.sp
     ),
     titleLarge = TextStyle(
-        fontFamily = quantityFamily,
-        fontSize = 24.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
+        fontFamily = monserratFamily,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 22.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.sp
-    ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
     )
-    */
-)
+) 

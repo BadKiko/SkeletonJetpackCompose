@@ -1,4 +1,4 @@
-package com.anonixteam.anonixvpn.ui.theme
+package dev.skeleton.jetpackcompose.ui.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -78,7 +78,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun AnonixVpnTheme(
+fun SkeletonJetpackComposeTheme(
     useDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
@@ -103,4 +103,4 @@ fun AnonixVpnTheme(
         content = content,
         typography = Typography
     )
-}
+} 

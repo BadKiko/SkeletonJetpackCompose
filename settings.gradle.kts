@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AnonixVpn"
+rootProject.name = "SkeletonJetpackCompose"
 include(":app")
  
